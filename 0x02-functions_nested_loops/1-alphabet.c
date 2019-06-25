@@ -1,12 +1,10 @@
 #include "holberton.h"
 
 /**
- * main - Prints a character using _putchar
+ * main - Prints the alphabet using _putchar
  *
  * Return: 0 - Success
  */
-
-void print_alphabet(void);
 
 int main(void)
 {
