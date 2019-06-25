@@ -1,14 +1,4 @@
 #include "holberton.h"
-/**
- * main - Prints the alphabet 10 times using _putchar
- *
- * Return: 0 - Success
- */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
 
 /**
  * print_alphabet_x10 - Print alphabet 10 times
