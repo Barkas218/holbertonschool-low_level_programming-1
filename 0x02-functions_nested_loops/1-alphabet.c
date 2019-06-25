@@ -1,17 +1,8 @@
-#include "holberton.h"
-
 /**
- * main - Prints the alphabet using _putchar
+ * print_alphabet - Print alphabet
  *
- * Return: 0 - Success
+ * Return: There is no return value
  */
-
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
 void print_alphabet(void)
 {
 	int i;
