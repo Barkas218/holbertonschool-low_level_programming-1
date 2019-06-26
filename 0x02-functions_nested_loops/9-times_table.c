@@ -36,7 +36,6 @@ void times_table(void)
 				_putchar(result + '0');
 			}
 		}
-	_putchar('$');
 	_putchar('\n');
 	}
 }
