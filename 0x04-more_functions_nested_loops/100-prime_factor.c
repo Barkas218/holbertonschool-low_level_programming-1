@@ -14,7 +14,6 @@ int main(void)
 	{
 		if (n % i == 0)
 			n = n - i;
-		i--;
 	}
 	printf("%ld\n", i);
 	return (0);
