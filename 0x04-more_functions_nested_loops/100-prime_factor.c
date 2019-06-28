@@ -13,7 +13,7 @@ int main(void)
 	for (i = 2; i <= n; i++)
 	{
 		if (n % i == 0)
-			n = n - i;
+			n = n / i;
 	}
 	printf("%ld\n", i);
 	return (0);
