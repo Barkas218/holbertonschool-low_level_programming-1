@@ -26,16 +26,19 @@ void puts_half(char *str)
 {
 	int i;
 	int len = _strlen(str);
-	int stop;
+	int start;
 
 	if (len % 2 == 0)
-		stop = len / 2;
+		start = (len / 2);
 	else
-		stop = (len - 1) / 2;
+		start = ((len - 1) / 2);
 
-	for (i = stop; i < len; i++)
+	i = start;
+
+	while (*(str + i) != '\0')
 	{
 		_putchar(*(str + i));
+		i++;
 	}
 	_putchar('\n');
 }
