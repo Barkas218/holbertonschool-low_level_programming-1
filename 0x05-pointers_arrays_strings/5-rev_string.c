@@ -17,24 +17,27 @@ int _strlen(char *s)
 }
 
 /**
- * print_rev - Print a string in reverse
+ * rev_string - Reverse a string
  * @s: Set of characters
  *
  * Return: Nothing
 */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
-	int len;
-	int i;
-
-	len = _strlen(s);
-	i = len;
+	int  len = _strlen(s);
+	int i = len;
+	char s_rev[1000];
+	int j = 0;
 
 	while (i >= 0)
 	{
-		_putchar(*(s + i));
+		s_rev[j] = *(s + i);
 		i--;
+		j++;
 	}
-	_putchar('\n');
+	for (i = 0; i <= len; i++)
+	{
+		*(s + i) = *(s_rev + i);
+	}
 }
