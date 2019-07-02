@@ -25,19 +25,21 @@ int _strlen(char *s)
 
 void rev_string(char *s)
 {
-	int  len = _strlen(s);
+	int len = _strlen(s);
 	int i = len;
 	char s_rev[1000];
 	int j = 0;
+	int k;
 
-	while (i >= 0)
+	while (i > 0)
 	{
-		s_rev[j] = *(s + i);
 		i--;
+		s_rev[j] = *(s + i);
 		j++;
 	}
-	for (i = 0; i <= len; i++)
+
+	for (k = 0; k < len; k++)
 	{
-		*(s + i) = *(s_rev + i);
+		*(s + k) = s_rev[k];
 	}
 }
