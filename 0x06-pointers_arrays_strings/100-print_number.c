@@ -23,6 +23,6 @@ void print_number(int num)
 	else
 	{
 		print_number(firstnum / 10);
-		_putchar((firstnum % 10) + '0';
+		_putchar((firstnum % 10) + '0');
 	}
 }
