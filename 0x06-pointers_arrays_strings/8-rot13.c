@@ -17,8 +17,10 @@ char *rot13(char *a)
 		for (j = 0; j <= 52; j++)
 		{
 			if (*(a + i) == initial[j])
+			{
 				*(a + i) = final[j];
 				break;
+			}
 		}
 	i++;
 	}
