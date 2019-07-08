@@ -13,6 +13,7 @@ char *_strstr(char *, char *);
 void print_chessboard(char (*)[]);
 void print_diagsums(int *, int);
 void set_string(char **, char *);
+int strleng (char *);
 
 
 #endif /* HOLBERTON_H */
