@@ -13,9 +13,9 @@ char *_strstr(char *haystack, char *needle)
 	int len_long_str = strleng(haystack);
 	int len_accept = strleng(needle);
 
-	for (i = 0; i < len_long_str; i++)
+	for (i = 0; i < len_long_str - 1; i++)
 	{
-		if (*(haystack + i) == *(needle + j) && j < len_accept)
+		if (*(haystack + i) == *(needle + j) && j < len_accept - 1)
 		{
 			if (j == (len_accept - 1))
 			{
@@ -26,7 +26,7 @@ char *_strstr(char *haystack, char *needle)
 		else
 			j = 0;
 	}
-	return (NULL);
+	return (0);
 }
 
 /**
