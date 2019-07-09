@@ -8,41 +8,21 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i;
-	int j;
-	int len_long_str = strleng(haystack);
-	int len_accept = strleng(needle);
+	int i = 0;
+	int j = 0;
 
-	for (i = 0; i < len_long_str - 2; i++)
+	while (*(haystack + i))
 	{
-		if (*(haystack + i) == *(needle + j) && j < len_accept - 2)
+		if (*(haystack + i) == *(needle + j))
 		{
-			if (j == (len_accept - 2))
-			{
-				return ((haystack + i) - (len_accept - 2));
-			}
 			j++;
+			if (*(needle + j) == '\0')
+				return ((haystack + i) - (j - 1));
 		}
 		else
 			j = 0;
-	}
-	return (0);
-}
-
-/**
- * strleng - Function that gets the length of a string.
- * @a: Pointer to a string
- *
- * Return: Length of the string (int)
- */
-int strleng(char *a)
-{
-	int i = 0;
-
-	while (a[i] != '\0')
-	{
-		i++;
-	}
 	i++;
-	return (i);
+	}
+
+	return (haystack);
 }
