@@ -13,13 +13,13 @@ char *_strstr(char *haystack, char *needle)
 	int len_long_str = strleng(haystack);
 	int len_accept = strleng(needle);
 
-	for (i = 0; i < len_long_str - 1; i++)
+	for (i = 0; i < len_long_str - 2; i++)
 	{
-		if (*(haystack + i) == *(needle + j) && j < len_accept - 1)
+		if (*(haystack + i) == *(needle + j) && j < len_accept - 2)
 		{
-			if (j == (len_accept - 1))
+			if (j == (len_accept - 2))
 			{
-				return ((haystack + i) - (len_accept - 1));
+				return ((haystack + i) - (len_accept - 2));
 			}
 			j++;
 		}
