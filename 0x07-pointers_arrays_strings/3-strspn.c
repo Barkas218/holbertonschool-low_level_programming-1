@@ -22,7 +22,7 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				counter++;
 			}
-			else if (j == len_accept - 2)
+			if (j == len_accept - 2)
 				return (counter);
 		}
 	}
