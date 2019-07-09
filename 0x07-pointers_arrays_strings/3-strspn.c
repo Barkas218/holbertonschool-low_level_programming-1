@@ -16,13 +16,14 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (i = 0; i < len_long_str - 1; i++)
 	{
-		for (j = 0; j < len_accept - 1; j++)
+		for (j = 0; j < len_accept; j++)
 		{
 			if (*(s + i) == *(accept + j))
 			{
 				counter++;
+				break;
 			}
-			if (j == len_accept - 2)
+			if (*(accept + j) == '\0')
 				return (counter);
 		}
 	}
