@@ -9,7 +9,7 @@
 void print_diagsums(int *a, int size)
 {
 	int i = 0;
-	int j = size - 1;
+	int j = 0;
 	long int result1 = 0;
 	long int result2 = 0;
 
@@ -20,12 +20,10 @@ void print_diagsums(int *a, int size)
 	}
 	printf("%ld", result1);
 
-	while (j < (size * size))
+	while (j < (size * size) - 1)
 	{
-		printf("Res: %ld\t", result2);
 		result2 += *(a + j);
 		j += (size - 1);
-		printf("j: %d", j);
 	}
 	printf(", %ld\n", result2);
 }
