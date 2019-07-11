@@ -13,5 +13,7 @@ int _pow_recursion(int, int);
 int _sqrt_recursion(int);
 int is_prime_number(int);
 int is_palindrome(char *);
+int get_sqrt(int, int);
+
 
 #endif /* HOLBERTON_H */
