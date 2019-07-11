@@ -7,7 +7,7 @@
  */
 int is_palindrome(char *s)
 {
-        return (get_palindrome(s, 0, strleng(s) - 1, strleng(s)));
+        return (get_palindrome(s, 0, strlengr(s, 0) - 1, strlengr(s, 0)));
 }
 /**
  * get_palindrome - Function that returns if the string is a palindrome
@@ -34,15 +34,15 @@ int get_palindrome(char *s, int i, int j, int k)
 
 
 /**
- * strleng - Function that gets the length of a string.
+ * strlengr - Function that gets the length of a string.
  * @a: Pointer to a string
+ * @i: Iterator
  *
  * Return: Length of the string (int)
  */
-int strleng(char *a)
+int strlengr(char *a, int i)
 {
-        int i = 0;
-        while (a[i] != '\0')
-                i++;
+        if (a[i] != '\0')
+            return (strlengr(a, ++i));
         return (i);
 }
