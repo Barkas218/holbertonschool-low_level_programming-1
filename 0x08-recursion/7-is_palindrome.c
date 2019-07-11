@@ -22,6 +22,9 @@ int is_palindrome(char *s)
  */
 int get_palindrome(char *s, int i, int j, int k)
 {
+	if (k == 0)
+		return (1);
+
 	if (*(s + i) == *(s + j))
 	{
 		if (j == 0)
