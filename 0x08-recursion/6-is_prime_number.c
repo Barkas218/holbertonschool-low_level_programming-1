@@ -8,7 +8,7 @@
  */
 int is_prime_number(int n)
 {
-	return get_prime(n, 2);
+	return (get_prime(n, 2));
 }
 
 /**
@@ -27,5 +27,5 @@ int get_prime(int n, int i)
 	else if (i == n)
 		return (1);
 
-	return get_prime(n, i + 1);
+	return (get_prime(n, i + 1));
 }
