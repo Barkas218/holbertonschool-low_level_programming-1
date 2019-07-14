@@ -17,13 +17,16 @@ int main(int argc, char *argv[])
 	{
 		while (*(*(argv + i) + j) != '\0')
 		{
-			if (*(*(argv + i) + j) < '0' || *(*(argv + i) + j) > '9'
-			|| *(*(argv + i) + j) != '-')
+			if ((*(*(argv + i) + j) >= '0' && *(*(argv + i) + j) <= '9')
+			|| *(*(argv + i) + j) == '-')
+			{
+				j++;
+			}
+			else
 			{
 				printf("Error\n");
 				return (1);
 			}
-			j++;
 		}
 		j = 0;
 
