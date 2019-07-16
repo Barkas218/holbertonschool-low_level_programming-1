@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 /**
  * str_concat - Copies a string and returns a pointer to the array.
@@ -13,6 +12,12 @@ char *str_concat(char *s1, char *s2)
 {
 	int i = 0, j = 0, k = 0, l = 0, m = 0, n = 0;
 	char *a;
+
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
 
 	while (*(s1 + i))
 		i++;
