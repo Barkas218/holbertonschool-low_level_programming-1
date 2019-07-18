@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * calloc - Function that allocates memory for an array.
+ * _calloc - Function that allocates memory for an array.
  * @nmemb: Number of elements.
  * @size: Size of each element.
  *
