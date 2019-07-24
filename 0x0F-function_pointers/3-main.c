@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "calc.h"
+#include "3-calc.h"
 
 /**
  * main - Entty function for basic calculator
