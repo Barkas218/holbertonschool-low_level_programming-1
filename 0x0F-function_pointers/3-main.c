@@ -4,7 +4,7 @@
 #include "3-calc.h"
 
 /**
- * main - Entty function for basic calculator
+ * main - Entry function for basic calculator
  * @argc: Arguments count
  * @argv: Arguments array
  *
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(99);
 	}
-	if (num2 == 0 && !(strcmp(argv[2], "/") || strcmp(argv[2], "%")))
+	if (num2 == 0 && (!(strcmp(argv[2], "/")) || !(strcmp(argv[2], "%"))))
 	{
 		printf("Error\n");
 		exit(100);
