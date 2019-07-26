@@ -2,18 +2,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "variadic_functions.h"
-
 /**
- * print_numbers - Print numbers with a separator.
+ * print_strings - Print strings with a separator.
  * @separator: Separator
  * @n: Quantity of numbers
  *
  * Return: Result of adding the numbers or 0 if not arguments were passed
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i = 0;
 	va_list arguments;
+	char *p;
 
 	if (separator == NULL)
 		return;
@@ -21,8 +21,15 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(arguments, n);
 
 	for (i = 0; i < (n - 1); i++)
-		printf("%d%s", va_arg(arguments, int), separator);
+	{
+		if ((p = va_arg(arguments, char *)) == NULL)
+		{
+			printf("(nil)");
+		}
+		printf("%s%s", p, separator);
+	}
 
-	printf("%d\n", va_arg(arguments, int));
+
+	printf("%s\n", va_arg(arguments, char *));
 	va_end(arguments);
 }
