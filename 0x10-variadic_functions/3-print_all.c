@@ -1,6 +1,5 @@
 #include <stdarg.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include "variadic_functions.h"
 /**
  * print_all - Print strings with a separator.
@@ -10,14 +9,12 @@
  */
 void print_all(const char *const format, ...)
 {
-	unsigned int i = 0;
+	unsigned int i = 0, j = 0;
 	char *arg_s;
 	va_list arguments;
 
-	if (format == NULL)
-		return;
 	va_start(arguments, format);
-	while (*(format + i) != '\0')
+	while (*(format + i) != '\0' && (format))
 	{
 		switch (*(format + i))
 		{
@@ -40,11 +37,14 @@ void print_all(const char *const format, ...)
 			printf("%c", (char) va_arg(arguments, int));
 			break;
 		}
-		while (format[i + 1] != '\0' && (format[i + 1] == 's' ||
-		format[i + 1] == 'i' || format[i + 1] == 'f' || format[i + 1] == 'c'))
+		j = i + 1;
+		while (format[j] != '\0' && (format[i] == 'c' || format[i] == 'f'
+		|| format[i] == 's' || format[i] == 'i'))
 		{
-			printf(", ");
-			break;
+			if (format[j] == 's' || format[j] == 'i' || format[j] == 'f'
+			|| format[j] == 'c')
+				printf(", ");
+		j++;
 		}
 		i++;
 	}
