@@ -9,7 +9,7 @@
  */
 void print_all(const char *const format, ...)
 {
-	unsigned int i = 0, j = 0;
+	unsigned int i = 0;
 	char *arg_s;
 	va_list arguments;
 
@@ -36,16 +36,12 @@ void print_all(const char *const format, ...)
 		case 'c':
 			printf("%c", (char) va_arg(arguments, int));
 			break;
+		default:
+			i++;
+			continue;
 		}
-		j = i + 1;
-		while (format[j] != '\0' && (format[i] == 'c' || format[i] == 'f'
-		|| format[i] == 's' || format[i] == 'i'))
-		{
-			if (format[j] == 's' || format[j] == 'i' || format[j] == 'f'
-			|| format[j] == 'c')
-				printf(", ");
-		j++;
-		}
+		if (*(format + i + 1) != '\0')
+			printf(", ");
 		i++;
 	}
 	printf("\n");
