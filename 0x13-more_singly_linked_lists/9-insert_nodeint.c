@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-
 /**
  * insert_nodeint_at_index - inserts a new node at a given position.
  * @head: Double pointer to the actual position of the linked list (struct)
@@ -22,7 +21,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 
 	if (idx == 0)
-		add_nodeint(head, n);
+		tmp = add_nodeint(head, n);
+		return (tmp);
 
 	while (i < idx)
 	{
@@ -54,20 +54,20 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
  */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-        listint_t *new;
-        int val = n;
+	listint_t *new;
+	int val = n;
 
-        if (head == NULL)
-                return (NULL);
+	if (head == NULL)
+		return (NULL);
 
-        new = malloc(sizeof(listint_t));
+	new = malloc(sizeof(listint_t));
 
-        if (new == NULL)
-                return (NULL);
+	if (new == NULL)
+		return (NULL);
 
-        new->n = val;
-        new->next = *head;
-        *head = new;
+	new->n = val;
+	new->next = *head;
+	*head = new;
 
-        return (*head);
+	return (*head);
 }
