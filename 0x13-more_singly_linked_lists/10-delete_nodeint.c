@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -8,7 +6,7 @@
  * @head: Double pointer to the actual position of the linked list (struct)
  * @index: Position of the node.
  *
- * Return: .
+ * Return: Status - 1 deleted or -1 not deleted (error).
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
