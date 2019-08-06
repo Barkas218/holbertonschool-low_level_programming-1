@@ -1,6 +1,4 @@
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 /**
  * insert_nodeint_at_index - inserts a new node at a given position.
@@ -17,7 +15,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *new;
 	listint_t *tmp = *head;
 
-	if (tmp == NULL)
+	if (head == NULL)
 		return (NULL);
 
 	if (idx == 0)
@@ -28,9 +26,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	while (i < idx)
 	{
+		tmp = tmp->next;
 		if (tmp == NULL)
 			return (NULL);
-		tmp = tmp->next;
 		i++;
 	}
 
