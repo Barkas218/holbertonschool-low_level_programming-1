@@ -11,7 +11,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int len = 0, result = 0;
 	int i = 0, j = 0;
-	unsigned int binary_arr[100];
+	unsigned int binary_arr[500];
 
 	if (b == NULL)
 		return (0);
