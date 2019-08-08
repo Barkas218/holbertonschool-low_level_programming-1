@@ -2,7 +2,7 @@
 #include "holberton.h"
 
 /**
- * get_bit - returns the value of a bit at a given index.
+ * set_bit - sets the value of a bit to 1 at a given index.
  * @n: Pointer to a decimal number
  * @index: Index
  *
