@@ -3,8 +3,9 @@
 /**
  * get_bit - returns the value of a bit at a given index.
  * @n: Decimal number
+ * @index: Index
  *
- * Return: Nothing (void).
+ * Return: 1 or 0. If error -1.
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
