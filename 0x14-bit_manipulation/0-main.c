@@ -22,9 +22,9 @@ int main(void)
 	printf("%u\n", n);
 	n = binary_to_uint(NULL);
 	printf("%u\n", n);
-	n = binary_to_uint("1111111111111111111111111111111111111111111111111111111111111111");
+	n = binary_to_uint("11111111111111111111111111111111111111111111111111111");
 	printf("%u\n", n);
-	n = binary_to_uint("0");
+	n = binary_to_uint("");
 	printf("%u\n", n);
 	return (0);
 }
