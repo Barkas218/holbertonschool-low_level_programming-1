@@ -24,10 +24,13 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 
 	for (len = 0; text_content[len] != '\0'; len++)
-		;
+		len++;
 
-	if (len == 0)
-		return (0);
+	if (len == 1)
+	{
+		close(fd);
+		return (1);
+	}
 
 	bytes_wrote = write(fd, text_content, len);
 
