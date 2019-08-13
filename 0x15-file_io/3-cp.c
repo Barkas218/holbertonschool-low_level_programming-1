@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	fd_dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_dest == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", name_dest);
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
