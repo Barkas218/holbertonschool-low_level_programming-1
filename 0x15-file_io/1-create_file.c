@@ -33,6 +33,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (len != bytes_wrote || bytes_wrote == -1)
 	{
+		write(STDOUT_FILENO, "fails", 6);
 		return (-1);
 	}
 	close(fd);
