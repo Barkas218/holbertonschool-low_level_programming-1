@@ -25,20 +25,20 @@ int create_file(const char *filename, char *text_content)
 
 	for (len = 0; text_content[len] != '\0'; len++)
 		;
-	len++;
 
-	if (text_content == NULL)
+	if (text_content != NULL)
 	{
-		close(fd);
-		return (1);
-	}
 
-	bytes_wrote = write(fd, text_content, len);
+		for (len = 0; text_content[len] != '\0'; len++)
+			;
 
-	if (len != bytes_wrote || bytes_wrote == -1)
-	{
-		write(STDOUT_FILENO, "fails", 6);
-		return (-1);
+		bytes_wrote = write(fd, text_content, len);
+
+		if (bytes_wrote == -1)
+		{
+			write(STDOUT_FILENO, "fails", 5);
+			return (-1);
+		}
 	}
 	close(fd);
 	return (1);
