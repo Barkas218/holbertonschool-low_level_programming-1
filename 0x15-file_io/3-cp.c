@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	fd_dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fd_dest == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		dprintf(2, "Error: Can't write to %s\n", name_dest);
 		exit(99);
 	}
 
@@ -65,7 +65,7 @@ int cpy_file(int fd_src, int fd_dest, char *name_source, char *name_dest)
 
 		bytes_wrote = write(fd_dest, buff, bytes_read);
 
-		if (bytes_wrote == -1)
+		if (bytes_wrote == -1 || bytes_read != bytes_wrote)
 		{
 			dprintf(2, "Error: Can't write to %s\n", name_dest);
 			exit(99);
@@ -78,7 +78,7 @@ int cpy_file(int fd_src, int fd_dest, char *name_source, char *name_dest)
 	if (close_fd_src == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd_src);
-		exit(99);
+		exit(100);
 	}
 
 	close_fd_dest = close(fd_dest);
@@ -86,7 +86,7 @@ int cpy_file(int fd_src, int fd_dest, char *name_source, char *name_dest)
 	if (close_fd_dest == -1)
 	{
 		dprintf(2, "Error: Can't close fd %d\n", fd_dest);
-		exit(99);
+		exit(100);
 	}
 
 	return (0);
