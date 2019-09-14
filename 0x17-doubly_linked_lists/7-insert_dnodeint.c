@@ -40,18 +40,17 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		new->prev = NULL;
 		new->next = NULL;
-		tmp = new;
+		*h = new;
 		return (new);
 	}
 
 	new->prev = tmp->prev;
 	new->next = tmp;
-	tmp->prev = new;
-
 	if (idx > 0)
 		tmp->prev->next = new;
 	else
-		tmp = new;
+		*h = new;
+	tmp->prev = new;
 
 	return (new);
 }
