@@ -2,7 +2,7 @@
 
 /**
  * sum_dlistint - sum the values in the linked list
- * @h: Head pointer
+ * @head: Head pointer
  *
  * Return: Sum of all the data or 0 if empty.
  */
