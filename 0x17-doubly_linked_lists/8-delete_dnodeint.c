@@ -40,6 +40,8 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		tmp->n = tmp->next->n;
 		tmp->next = tmp->next->next;
 		free(nodeToDelete);
+		if (index == 0)
+			*head = tmp;
 	}
 
 	return (1);
