@@ -19,13 +19,13 @@ void hash_table_print(const hash_table_t *ht)
 
 	i = 0;
 	number_of_nodes = 0;
-	printf("{");
+
 	if (ht == NULL)
-	{
-		printf("}\n");
 		return;
-	}
+
 	size = ht->size;
+
+	printf("{");
 
 	for (i = 0; i < size; i++)
 	{
