@@ -35,7 +35,7 @@ void hash_table_print(const hash_table_t *ht)
 			while (element != NULL)
 			{
 				if (number_of_nodes > 0)
-					printf(",");
+					printf(", ");
 				printf("'%s': ", element->key);
 				printf("'%s'", element->value);
 				number_of_nodes++;
