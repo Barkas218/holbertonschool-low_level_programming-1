@@ -10,6 +10,7 @@
 void quick_sort(int *array, size_t size)
 {
 	int lo, hi;
+
 	lo = 0;
 	hi = ((int) size) - 1;
 
@@ -20,10 +21,11 @@ void quick_sort(int *array, size_t size)
 }
 
 /**
- * quick_sort_lomuto - Sorting an array of ncc -Wall -Wextra -Werror -pedantic 3-main.c 3-quick_sort.c print_array.c -o quickumber using quick sort (Lomuto)
+ * quick_sort_lomuto - Sorting an array of numbers using quick sort (Lomuto)
  * @array: Array
  * @lo: Array start index
  * @hi: Array end index
+ * @size: SIze of the complete array
  * Return: Nothing
 **/
 
@@ -44,8 +46,9 @@ void quick_sort_lomuto(int *array, int lo, int hi, size_t size)
 /**
  * partition_lomuto - Partition function for quick sort (Lomuto)
  * @array: Array
- * @p: Array start index
- * @r: Array end index
+ * @lo: Array start index
+ * @hi: Array end index
+ * @size: Size of the complete array
  * Return: New pivot
 **/
 
