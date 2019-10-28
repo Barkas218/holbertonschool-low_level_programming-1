@@ -72,10 +72,13 @@ int partition_lomuto(int *array, int lo, int hi, size_t size)
 
 		}
 	}
-	tmp = array[i];
-	array[i] = array[hi];
-	array[hi] = tmp;
-	if (i != hi)
-		print_array(array, size);
+	if (array[i] != array[hi])
+	{
+		tmp = array[i];
+		array[i] = array[hi];
+		array[hi] = tmp;
+		if (i != hi)
+			print_array(array, size);
+	}
 	return (i);
 }
