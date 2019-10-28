@@ -37,7 +37,7 @@ void quick_sort_lomuto(int *array, int lo, int hi, size_t size)
 	{
 		piv = partition_lomuto(array, lo, hi, size);
 		quick_sort_lomuto(array, lo, piv - 1, size);
-		quick_sort_lomuto(array, lo + 1, hi, size);
+		quick_sort_lomuto(array, piv + 1, hi, size);
 
 	}
 }
