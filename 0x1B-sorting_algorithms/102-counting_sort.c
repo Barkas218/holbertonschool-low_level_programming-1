@@ -32,10 +32,9 @@ void counting_sort(int *array, size_t size)
 
 
 /**
- * algorithm_counting_sort - Algorithm to sort an array of numbers using counting sort
+ * algorithm_counting_sort - Algorithm to sort an arrays using counting sort
  * @array: Array
  * @size: Size of the array
- * @min: Minimum value
  * @max: Maximum value
  * Return: Nothing
 **/
