@@ -2,6 +2,7 @@
 #define INC_0X1B_SORTING_AGORITHMS_SORT_H
 
 #include <stdio.h>
+#include <stdlib.h>
 /* Structures */
 
 /**
@@ -29,6 +30,8 @@ void print_list(const listint_t *list);
 void quick_sort_lomuto(int *array, int lo, int hi, size_t size);
 int partition_lomuto(int *array, int lo, int hi, size_t size);
 void swap(listint_t *left, listint_t *node_2, listint_t **list);
+void counting_sort(int *array, size_t size);
+void algorithm_counting_sort(int *array, int size, int max);
 
 
 
