@@ -37,6 +37,13 @@ void radix_sort(int *array, size_t size);
 int get_digits_number(int n);
 void algorithm_radix_sort(int *array, int *buckets, int size, int max_digits);
 int _pow_recursion(int x, int y);
+void shell_sort(int *array, size_t size);
+size_t gap(size_t limit);
+void merge_sort(int *array, size_t size);
+void TopDownMergeSort(int *A, int *B, size_t n);
+void TopDownSplitMerge(int *B, size_t iBegin, size_t iEnd, int *A);
+void TopDownMerge(int *A, size_t iBegin, size_t iMiddle, size_t iEnd, int *B);
+void CopyArray(int *A, size_t iBegin, size_t iEnd, int *B);
 
 
 
