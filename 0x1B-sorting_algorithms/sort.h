@@ -44,7 +44,9 @@ void TopDownMergeSort(int *A, int *B, size_t n);
 void TopDownSplitMerge(int *B, size_t iBegin, size_t iEnd, int *A);
 void TopDownMerge(int *A, size_t iBegin, size_t iMiddle, size_t iEnd, int *B);
 void CopyArray(int *A, size_t iBegin, size_t iEnd, int *B);
-
+void cocktail_sort_list(listint_t **list);
+void swap_nodes(listint_t **head, listint_t *node1, listint_t *node2);
+void algorithm_cocktail_sort(listint_t **list);
 
 
 #endif /*INC_0X1B_SORTING_AGORITHMS_SORT_H*/
