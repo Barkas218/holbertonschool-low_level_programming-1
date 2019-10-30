@@ -112,7 +112,7 @@ void algorithm_radix_sort(int *array, int *buckets, int size, int max_digits)
 
 	for (iteration = 1; iteration <= max_digits; iteration++)
 	{
-		for (i = 0; i < size; i++)
+		for (i = 0; i < 10; i++)
 			buckets[i] = 0;
 
 		for (i = 0; i < size; i++)
@@ -136,6 +136,7 @@ void algorithm_radix_sort(int *array, int *buckets, int size, int max_digits)
 
 		print_array(array, size);
 	}
+
 	free(buckets);
 	free(sorted_array);
 }
