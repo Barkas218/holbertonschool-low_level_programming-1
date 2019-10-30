@@ -49,7 +49,7 @@ void swap_nodes(listint_t **head, listint_t *node1, listint_t *node2);
 void algorithm_cocktail_sort(listint_t **list);
 void quick_sort_hoare(int *array, size_t size);
 void algorithm_quick_sort_h(int *array, size_t lo, size_t hi, size_t size,
-                            size_t p);
+							size_t p);
 size_t partition_h(int *array, size_t lo, size_t hi, size_t size);
 
 #endif /*INC_0X1B_SORTING_AGORITHMS_SORT_H*/
