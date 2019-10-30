@@ -51,5 +51,7 @@ void quick_sort_hoare(int *array, size_t size);
 void algorithm_quick_sort_h(int *array, size_t lo, size_t hi, size_t size,
 							size_t p);
 size_t partition_h(int *array, size_t lo, size_t hi, size_t size);
+void heap_sort(int *array, size_t size);
+void bitonic_sort(int *array, size_t size);
 
 #endif /*INC_0X1B_SORTING_AGORITHMS_SORT_H*/
