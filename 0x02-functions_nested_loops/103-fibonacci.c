@@ -9,10 +9,10 @@ int main(void)
 {
 	long int i;
 	long int first = 1;
-	long int second = 1;
+	long int second = 2;
 	long int sum;
 
-	printf("%d", 1);
+	printf("%d", 2);
 	for (i = 1; i < 4000000 ; i++)
 	{
 		sum = first + second;
