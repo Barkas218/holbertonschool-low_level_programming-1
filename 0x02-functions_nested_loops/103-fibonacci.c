@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Get the even Fibonnaci numbers up to 4 million
+ * main - Get the sum of even Fibonnaci numbers up to 4 million
  *
  * Return: Always 0.
  */
@@ -9,20 +9,20 @@ int main(void)
 {
 	long int i;
 	long int first = 1;
-	long int second = 2;
-	long int sum;
+	long int second = 1;
+	long int sum = 2;
+	long int total;
 
-	printf("%d", 2);
 	for (i = 1; i < 4000000 ; i++)
 	{
 		sum = first + second;
 		if (sum % 2 == 0)
-			printf(", %ld", sum);
+			total += sum;
 		first = second;
 		second = sum;
 	}
 
-	printf("\n");
+	printf("%ld\n", total);
 
 	return (0);
 }
