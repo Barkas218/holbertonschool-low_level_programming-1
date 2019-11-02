@@ -11,7 +11,7 @@ int main(void)
 	long int first = 1;
 	long int second = 1;
 	long int sum = 2;
-	long int total;
+	long long int total;
 
 	for (i = 1; i < 4000000 ; i++)
 	{
