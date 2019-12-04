@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_full - Checks if the binary tree is a full binary tree
+ * binary_tree_is_perfect - Checks if the binary tree is a perfect binary tree
  * @tree: Pointer to the tree
- * Return: 1 if is full or 0 if is not full
+ * Return: 1 if is perfect or 0 if is not perfect
  */
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
@@ -21,7 +21,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 
 /**
- * binary_tree_is_full - Checks if the binary tree is a full binary tree
+ * binary_tree_is_full_2 - Checks if the binary tree is a full binary tree
  * @tree: Pointer to the tree
  * Return: 1 if is full or 0 if is not full
  */
@@ -46,7 +46,7 @@ int binary_tree_is_full_2(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_balance - Checks the balance of a binary tree
+ * binary_tree_balance_2 - Checks the balance of a binary tree
  * @tree: Pointer to the tree
  * Return: Balance of the binary tree
  */
@@ -68,7 +68,7 @@ int binary_tree_balance_2(const binary_tree_t *tree)
 
 
 /**
- * binary_tree_height_2 - Gets the tree height in a binary tree
+ * binary_tree_height_3 - Gets the tree height in a binary tree
  * @tree: Pointer to the tree
  * Return: Height
  */
@@ -86,5 +86,4 @@ size_t binary_tree_height_3(const binary_tree_t *tree)
 	if (right_count > left_count)
 		return (right_count + 1);
 	return (left_count + 1);
-
 }
