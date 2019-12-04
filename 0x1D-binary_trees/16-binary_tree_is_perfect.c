@@ -10,6 +10,9 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int is_balanced, is_full, flag_1 = 1, flag_2 = 1;
 
+	if (tree == NULL)
+		return (0);
+
 	if (tree->left)
 		flag_1 = binary_tree_is_perfect(tree->left);
 
