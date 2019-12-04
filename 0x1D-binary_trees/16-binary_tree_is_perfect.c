@@ -8,15 +8,20 @@
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-	int is_balanced, is_full;
+	int is_balanced, is_full, flag_1 = 1, flag_2 = 1;
+
+	if (tree->left)
+		flag_1 = binary_tree_is_perfect(tree->left);
+
+	if (tree->right)
+		flag_2 = binary_tree_is_perfect(tree->right);
 
 	is_balanced = binary_tree_balance_2(tree);
 	is_full = binary_tree_is_full_2(tree);
 
-	if (is_balanced == 0 && is_full == 1)
+	if (is_balanced == 0 && is_full == 1 && flag_1 == 1 && flag_2 == 1)
 		return (1);
 	return (0);
-
 }
 
 
