@@ -8,7 +8,8 @@
  * Return: Nothing
  */
 
-void levelorder_recur(const binary_tree_t *tree, size_t height, void (*func)(int))
+void levelorder_recur(const binary_tree_t *tree,
+		size_t height, void (*func)(int))
 {
 	if (height == 0)
 		func(tree->n);
@@ -20,8 +21,8 @@ void levelorder_recur(const binary_tree_t *tree, size_t height, void (*func)(int
 }
 
 /**
- * binary_tree_levelorder - Traverses the binary tree using level-order algorithm
- * @node: Pointer to the node
+ * binary_tree_levelorder - Traverses the binary tree using level-order
+ * @tree: Pointer to the tree
  * @func: Function
  * Return: Nothing
  */
