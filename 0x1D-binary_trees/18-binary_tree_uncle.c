@@ -6,12 +6,15 @@
  * Return: Uncle node or NULL if error
  */
 
-size_t binary_tree_height(const binary_tree_t *tree)
+size_t binary_tree_uncle(const binary_tree_t *tree)
 {
-	binary_tree_t *parent = node->parent;
+	binary_tree_t *parent;
 
-	if (node == NULL || parent == NULL || parent->parent == NULL)
+	if (node == NULL || node->parent == NULL ||
+			(node->parent)->parent == NULL)
 		return (NULL);
+
+	parent = node->parent;
 
 	if ((parent->parent)->right == parent)
 		return ((parent->parent)->left);
